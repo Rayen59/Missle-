@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypersonic Unified Field Theory - Total Mathematical Density</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #555555; /* نص غامق جداً ليبقى التركيز على المعادلات */
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.68em; /* أصغر خط ممكن للكثافة القصوى */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.2;
+        }
+        .container { max-width: 1600px; margin: auto; }
+        h1, h2 {
+            color: #ffffff;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .math-block {
+            color: #ffffff; /* المعادلات باللون الأبيض لتبرز في الظلام */
+            background: #010101;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #0a0a0a;
+            white-space: pre-wrap;
+        }
+        .sub-header {
+            color: #888;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: block;
+            border-left: 2px solid #333;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>CLASSIFIED: HYPERSONIC KINEMATIC FORMALISM (VER: 9.8.4)</h1>
+
+    <span class="sub-header">PART I: NON-EQUILIBRIUM BOLTZMANN TRANSPORT & SPECIES DISSOCIATION</span>
+    <div class="math-block">
+        $$ \mathcal{D}_t f_i = \left( \frac{\partial}{\partial t} + \mathbf{v} \cdot \nabla_{\mathbf{r}} + \frac{\mathbf{F}}{m_i} \cdot \nabla_{\mathbf{v}} \right) f_i = \sum_{j=1}^N \iint [f_i' f_j' - f_i f_j] g_{ij} \sigma_{ij} d\Omega d\mathbf{v}_j + \sum_{r=1}^{N_R} \left( \dot{\omega}_i \right)_{chem} $$
+        $$ \dot{\omega}_i = M_{w,i} \sum_{r=1}^{N_r} (\nu_{i,r}'' - \nu_{i,r}') \left[ k_{f,r} \prod_{j=1}^N \left( \frac{\rho c_j}{M_{w,j}} \right)^{\nu_{j,r}'} - \frac{k_{f,r}}{K_{c,r}} \prod_{j=1}^N \left( \frac{\rho c_j}{M_{w,j}} \right)^{\nu_{j,r}''} \right] $$
+        $$ K_{c,r}(T) = \exp \left( \sum_{i=1}^N (\nu_{i,r}'' - \nu_{i,r}') \left[ \frac{S_i^\circ}{R} - \frac{H_i^\circ}{RT} \right] \right) \cdot (RT)^{-\sum \Delta \nu} $$
+    </div>
+
+    
+
+    <span class="sub-header">PART II: TENSOR MANIFOLD OF COMPRESSIBLE NAVIER-STOKES & REYNOLDS STRESS</span>
+    <div class="math-block">
+        $$ \frac{\partial}{\partial t} \int_{\Omega} \mathbf{Q} d\Omega + \oint_{\partial \Omega} (\mathbf{F}_{inv} - \mathbf{F}_{visc}) \cdot \mathbf{n} dS = \int_{\Omega} \mathbf{S} d\Omega \quad \text{where} \quad \mathbf{Q} = [\rho, \rho u, \rho v, \rho w, \rho E, \rho k, \rho \epsilon]^T $$
+        $$ \boldsymbol{\tau}_{total} = \left[ \mu \left( \frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} - \frac{2}{3} \delta_{ij} \frac{\partial u_k}{\partial x_k} \right) - \rho \overline{u_i' u_j'} \right] \otimes \mathbf{e}_i \mathbf{e}_j $$
+        $$ \rho \overline{u_i' u_j'} = \frac{2}{3} \rho k \delta_{ij} - 2\mu_t \left( S_{ij} - \frac{1}{3} S_{kk} \delta_{ij} \right), \quad S_{ij} = \frac{1}{2} \left( \frac{\partial \bar{u}_i}{\partial x_j} + \frac{\partial \bar{u}_j}{\partial x_i} \right) $$
+    </div>
+
+    <span class="sub-header">PART III: STOCHASTIC HAMILTON-JACOBI-BELLMAN (HJB) INTERCEPTION AVOIDANCE</span>
+    <div class="math-block">
+        $$ \mathcal{L} V(\mathbf{x}, t) = \frac{\partial V}{\partial t} + \inf_{\mathbf{u} \in \mathcal{U}} \left\{ \sum_{i=1}^d f_i(\mathbf{x}, \mathbf{u}) \frac{\partial V}{\partial x_i} + \frac{1}{2} \sum_{i,j=1}^d [\sigma(\mathbf{x}) \sigma(\mathbf{x})^T]_{ij} \frac{\partial^2 V}{\partial x_i \partial x_j} + \mathcal{G}(\mathbf{x}, \mathbf{u}) \right\} = 0 $$
+        $$ \Psi(\mathbf{x}, T) = \mathbb{E} \left[ \int_t^T e^{-\int_t^s \gamma(\mathbf{x}_\tau) d\tau} \mathcal{G}(\mathbf{x}_s, \mathbf{u}_s) ds + e^{-\int_t^T \gamma(\mathbf{x}_\tau) d\tau} \Phi(\mathbf{x}_T) \right] $$
+    </div>
+
+    
+
+    <span class="sub-header">PART IV: MAGNETOHYDRODYNAMIC PLASMA IONIZATION & MAXWELL COUPLING</span>
+    <div class="math-block">
+        $$ \mathbf{E} + \mathbf{v} \times \mathbf{B} = \eta \mathbf{J} + \frac{1}{n_e e} (\mathbf{J} \times \mathbf{B}) - \frac{\nabla p_e}{n_e e} + \frac{m_e}{n_e e^2} \frac{\partial \mathbf{J}}{\partial t} $$
+        $$ \epsilon(\omega) = \epsilon_0 \left[ 1 - \frac{\omega_p^2}{\omega (\omega + i \nu_{eff})} \right], \quad \nabla^2 \mathbf{E} - \mu_0 \epsilon \frac{\partial^2 \mathbf{E}}{\partial t^2} - \mu_0 \sigma \frac{\partial \mathbf{E}}{\partial t} = 0 $$
+        $$ \omega_p = \left( \frac{n_e e^2}{\epsilon_0 m_e} \right)^{1/2}, \quad \oint \mathbf{H} \cdot d\mathbf{l} = \iint \left( \mathbf{J} + \epsilon \frac{\partial \mathbf{E}}{\partial t} \right) \cdot d\mathbf{A} $$
+    </div>
+
+    <span class="sub-header">PART V: RELATIVISTIC CORRECTION FOR HIGH-ALTITUDE KINEMATICS</span>
+    <div class="math-block">
+        $$ ds^2 = -\left(1 - \frac{2GM}{rc^2}\right)c^2 dt^2 + \left(1 - \frac{2GM}{rc^2}\right)^{-1}dr^2 + r^2(d\theta^2 + \sin^2 \theta d\phi^2) $$
+        $$ \frac{d^2 x^\mu}{ds^2} + \Gamma^\mu_{\alpha \beta} \frac{dx^\alpha}{ds} \frac{dx^\beta}{ds} = \frac{1}{m} \mathcal{F}_{aero}^\mu \quad \text{where} \quad \Gamma^\mu_{\alpha \beta} = \frac{1}{2} g^{\mu \nu} (\partial_\beta g_{\nu \alpha} + \partial \alpha g_{\nu \beta} - \partial_\nu g_{\alpha \beta}) $$
+    </div>
+</div>
+
+</body>
+</html>
